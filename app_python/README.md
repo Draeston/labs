@@ -1,4 +1,7 @@
 # Simple Moscow Time Getter
+
+![Build and test status](https://github.com/draeston/labs/actions/workflows/init.yml/badge.svg)
+
 ## A Python web-application for getting Moscow time
 
 # Install
@@ -49,7 +52,14 @@ To build an image and run container there are following steps:
 3. Then run container via the following command
 ```docker run -d -p 3000:3000 <image_id>```
 
-You can get image from my [Docker Hub repo](https://hub.docker.com/layers/draeston/moscow_time/latest/images/sha256:ff7ab12d9eb6934b9f7465ea13d53a294468cbf3008472efecc83cc29abbdd11)
+You can get image from my [Docker Hub repo](https://hub.docker.com/repository/docker/draeston/devops_app/general)
+
+# Unit test
+To run tests use the following command after installing dependencies
+```pytest```
+
+# Continous Integration
+Workflow ```ci-python``` ensures that there is no linter or test failures, and run snyk to check for vulnerabilities
 
 # Contact
 Contact me in Telegram if you have any questions: @NiosZ
