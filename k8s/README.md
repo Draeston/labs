@@ -1,3 +1,4 @@
+# Lab 9
 # Manual approach
 
 ```
@@ -57,3 +58,37 @@ $ minikube service --all
 
 ![Screenshot](screenshot.png)
 
+# Lab 10
+## Dashboard
+
+![Dashboard](dashboard.png)
+
+## Commands outputs
+```
+$ minikube service helm-app-python-app
+
+|-----------|---------------------|-------------|---------------------------|
+| NAMESPACE |        NAME         | TARGET PORT |            URL            |
+|-----------|---------------------|-------------|---------------------------|
+| default   | helm-app-python-app | http/80     | http://192.168.49.2:31744 |
+|-----------|---------------------|-------------|---------------------------|
+🏃  Starting tunnel for service helm-app-python-app.
+|-----------|---------------------|-------------|------------------------|
+| NAMESPACE |        NAME         | TARGET PORT |          URL           |
+|-----------|---------------------|-------------|------------------------|
+| default   | helm-app-python-app |             | http://127.0.0.1:55913 |
+|-----------|---------------------|-------------|------------------------|
+🎉  Opening service default/helm-app-python-app in default browser...
+❗  Because you are using a Docker driver on windows, the terminal needs to be open to run it.
+```
+
+```
+$ kubectl get pods,svc    
+ 
+NAME                                      READY   STATUS    RESTARTS   AGE
+pod/helm-app-python-app-769877748-z44xp   1/1     Running   0          2m27s
+
+NAME                          TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+service/helm-app-python-app   LoadBalancer   10.106.81.99   <pending>     80:31744/TCP   2m27s
+service/kubernetes            ClusterIP      10.96.0.1      <none>        443/TCP        20h
+```
