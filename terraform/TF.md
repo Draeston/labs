@@ -1,7 +1,7 @@
 # Docker
 ## Initial state
 ```
-terraform show
+$ terraform show
 
 # docker_container.nginx:
 resource "docker_container" "nginx" {
@@ -77,7 +77,7 @@ resource "docker_image" "nginx" {
 ```
 
 ```
-terraform state list
+$ terraform state list
 
 docker_container.nginx
 docker_image.nginx
@@ -173,7 +173,8 @@ image_id = "sha256:3f8a00f137a0d2c8a2163a09901e28e2471999fde4efc2f9570b91f1c30ac
 ## Initial state
 
 ```
-terraform show 
+$ terraform show
+
 # data.yandex_compute_image.default:
 data "yandex_compute_image" "default" {
     created_at    = "2023-01-30T10:49:08Z"
@@ -287,7 +288,7 @@ resource "yandex_vpc_subnet" "default" {
 ```
 
 ```
-terraform state list
+$ terraform state list
 
 data.yandex_compute_image.default
 yandex_compute_instance.default
