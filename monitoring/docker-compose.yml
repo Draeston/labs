@@ -17,6 +17,8 @@ services:
   app_python:
     image: draeston/devops_app:latest
     mem_limit: 250m
+    volumes:
+      - ../app_python:/app
     ports:
       - "8080:3000"
     networks:
